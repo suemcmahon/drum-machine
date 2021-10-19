@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import Display from "./Display";
 import DrumPad from "./DrumPad";
 import drumPadData from "../constants/drumPadData";
 
 const DrumMachine = () => {
+  const [display, setDisplay] = useState("");
+
   const playSound = (id) => {
     const audio = document.getElementById(id);
     audio.play();
@@ -27,8 +29,8 @@ const DrumMachine = () => {
 
   return (
     <div id="drum-machine" className="drum-machine">
-      <Display />
-      <DrumPad data={drumPadData} sound={playSound} />
+      <Display description={display} />
+      <DrumPad data={drumPadData} sound={playSound} display={setDisplay} />
     </div>
   );
 };
