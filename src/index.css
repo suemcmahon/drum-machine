@@ -1,10 +1,9 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Space Mono', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #d4f4ff;
 }
 
 code {
@@ -12,10 +11,74 @@ code {
     monospace;
 }
 
+.container {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
+
+.drum-machine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  background: #54799b;
+  border-radius: 5px;
+  padding: 20px;
+  border: 5px solid #9fadbd;
+}
+
+@media only screen and (min-width: 800px) {
+  .drum-machine {
+    flex-direction: row;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.drum-pad-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-gap: 10px;
+}
+
 .drum-pad {
   width: 100px;
   height: 100px;
-  background: red;
+  background: #cf9bb0;
+  color: #a95d80;
+  border-radius: 5px;
   display: flex;
-  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  box-shadow: 0 8px 6px -6px #3b4856;
+}
+
+.display-container {
+  width: 300px;
+}
+
+.display {
+  background: #3b4856;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 5px solid #9fadbd;
+  color: #9fadbd;
+  text-align: center;
+  padding: 35px 0;
+}
+
+@media only screen and (min-width: 800px) {
+  .display {
+    margin-right: 20px;
+  }
 }

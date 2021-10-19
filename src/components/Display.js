@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 const Display = ({ description }) => {
   return (
-    <div id="display" className="display">
-      {description}
+    <div className="column display-container">
+      <div id="display" className="display">
+        {description}
+      </div>
     </div>
   );
 };

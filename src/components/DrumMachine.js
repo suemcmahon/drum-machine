@@ -4,7 +4,7 @@ import DrumPad from "./DrumPad";
 import drumPadData from "../constants/drumPadData";
 
 const DrumMachine = () => {
-  const [display, setDisplay] = useState("");
+  const [display, setDisplay] = useState("Click or press key...");
 
   const playSound = (id) => {
     const audio = document.getElementById(id);
@@ -17,6 +17,7 @@ const DrumMachine = () => {
       drumPadData.forEach(function (item) {
         if (item.keyCode === keyCode) {
           playSound(item.keyTrigger);
+          setDisplay(item.id);
         }
       });
     };

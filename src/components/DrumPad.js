@@ -3,7 +3,7 @@ import AudioClip from "./AudioClip";
 
 const DrumPad = ({ data, sound, display }) => {
   return (
-    <>
+    <div className="column drum-pad-container">
       {data.map(({ keyTrigger, id, url }) => (
         <div
           id={id}
@@ -18,7 +18,7 @@ const DrumPad = ({ data, sound, display }) => {
           <AudioClip src={url} id={keyTrigger} />
         </div>
       ))}
-    </>
+    </div>
   );
 };
 
