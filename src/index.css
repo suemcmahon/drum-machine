@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.drum-pad {
+  width: 100px;
+  height: 100px;
+  background: red;
+  display: flex;
+  margin-bottom: 10px;
+}
